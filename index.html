@@ -7,11 +7,45 @@
 
     <title>Weather App</title>
 
-    <link href="styles/styles.css" rel="stylesheet"/>
+    <link href="styles/general.css" rel="stylesheet"/>
+    <link href="styles/search.css" rel="stylesheet"/>
+    <link href="styles/weather.css" rel="stylesheet"/>
   </head>
 
   <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="Enter City name"
+          spellcheck="false"/>
+        <button>
+          <img src="assets/icons/search.png" alt="Search Icon"/>
+        </button>
+      </div>
+      <div class="weather">
+        <img class="weather-icon" src="assets/icons/rain.png"
+          alt="weather icon"/>
+        
+        <h1 class="temp">20&#176;C</h1>
+        <h2 class="city">New York</h2>
 
+        <div class="weather-details">
+          <div class="col">
+            <img src="assets/icons/humidity.png" alt="humidity icon"/>
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="assets/icons/wind.png" alt="humidity icon"/>
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="scripts/script.js"></script>
   </body>
