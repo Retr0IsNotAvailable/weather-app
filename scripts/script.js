@@ -20,7 +20,7 @@ async function validateAPIKey(key) {
     alert('API key validated succesfully');
     apiKey = key;
     document.querySelector('.apiKey-input').style.display = 'none';
-    document.querySelector('.search').style.display = 'block';
+    document.querySelector('.search').style.display = 'flex';
   } else {
     alert(`Invalid API key`);
   }
