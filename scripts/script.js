@@ -31,25 +31,9 @@ async function checkWeather(city = 'madrid') {
     document.querySelector('.js-wind')
       .innerHTML = `${Math.round(data.wind.speed)} km/h`;
     
-    switch (data.weather[0].main) {
-      case 'Clouds':
-        weatherIconElement.src = './assets/icons/clouds.png';
-        break;
-      case 'Clear':
-        weatherIconElement.src = './assets/icons/clear.png';
-        break;
-      case 'Rain':
-        weatherIconElement.src = './assets/icons/rain.png';
-        break;
-      case 'Drizzle':
-        weatherIconElement.src = './assets/icons/drizzle.png';
-        break;
-      case 'Mist':
-        weatherIconElement.src = './assets/icons/mist.png';
-        break;
-      default:
-        break;
-    }
+    let weatherCondition = data.weather[0].main.toLowerCase();
+    weatherIconElement.src = `./assets/icons/${weatherCondition}.png`;
+    
     weatherElement.style.display = 'block';
   }
 }
