@@ -1,11 +1,12 @@
-.search {
+.search, .apiKey-input {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.search input {
+.search input,
+.apiKey-input input {
   border: none;
   outline: none;
   background: #ebfffc;
@@ -16,6 +17,10 @@
   flex: 1;
   margin-right: 16px;
   font-size: 18px;
+}
+
+.search {
+  display: none;
 }
 
 .search button {
